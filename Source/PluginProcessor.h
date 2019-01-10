@@ -1,9 +1,7 @@
 /*
   ==============================================================================
 
-    This file was auto-generated!
-
-    It contains the basic framework code for a JUCE plugin processor.
+This plugin fills a buffer of variable length with the input signal. It then splits it into slices of a custom length and plays the slices in a random order. 
 
   ==============================================================================
 */
@@ -23,6 +21,7 @@ public:
 	int tmpBuffersize = 44100. *2;
 	int slicelength = 0;
 	int slicesize = 22050;
+	int mode = 0;
 	
 	
     //==============================================================================

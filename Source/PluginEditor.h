@@ -27,6 +27,7 @@ public:
     void resized() override;
 	
 	void sliderValueChanged (Slider* slider) override;
+	void modeButtonClicked();
 
 
 private:
@@ -39,6 +40,7 @@ private:
 	
 	Slider bufferslider;
 	Slider sliceslider;
+	ToggleButton modeButton;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (AudioScramblerAudioProcessorEditor)
 };

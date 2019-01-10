@@ -34,6 +34,12 @@ AudioScramblerAudioProcessorEditor::AudioScramblerAudioProcessorEditor (AudioScr
 	sliceslider.setSize(200, 100);
 	sliceslider.addListener(this);
 	addAndMakeVisible(sliceslider);
+	
+	
+	modeButton.setButtonText ("Reverse");
+	modeButton.onClick = [this] { modeButtonClicked(); };
+//modeButton.setSize (300, 100);
+	addAndMakeVisible (modeButton);
 }
 
 AudioScramblerAudioProcessorEditor::~AudioScramblerAudioProcessorEditor()
@@ -56,8 +62,21 @@ void AudioScramblerAudioProcessorEditor::resized()
     // subcomponents in your editor..
 	sliceslider.setBounds(40, 40, 100, 20);
 	bufferslider.setBounds(20, 20, 100, 20);
+	modeButton.setBounds(Rectangle<int>(Point<int>(300,50),Point<int>(400,150)));
 }
 
+void AudioScramblerAudioProcessorEditor::modeButtonClicked(){
+	
+	if (processor.mode == 0){
+		processor.mode = 1;
+		
+	}
+	else{
+		processor.mode = 0;
+	}
+	
+	
+}
 
 void AudioScramblerAudioProcessorEditor::sliderValueChanged (Slider* slider){
 	

@@ -168,7 +168,8 @@ void AudioScramblerAudioProcessor::processBlock (AudioBuffer<float>& buffer, Mid
 			//once the continuous buffer is full, copy it into the tmpbuffer
 			tmpBuffer.makeCopyOf(tmpBufferContinuous);
 			for (int channel = 0; channel < totalNumInputChannels; ++channel)
-				tmpBuffer.reverse(channel, 0, tmpBuffersize);
+				if (mode == 1)
+					tmpBuffer.reverse(channel, 0, tmpBuffersize);
 			}
 		
 		//plays the slices
