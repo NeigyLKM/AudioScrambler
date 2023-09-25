@@ -1,3 +1,7 @@
+#Количество копирований - 1
+#Количество веток - 1
+#Количество разработчиков - 1
+#Регулярность использования - 2
 <?xml version="1.0" encoding="UTF-8"?>
 
 <JUCERPROJECT id="JFjcwm" name="AudioScrambler" projectType="audioplug" jucerVersion="5.4.1">
